@@ -46,7 +46,10 @@ class HyundaiCrawlerSpider(scrapy.Spider):
                     if match_2:
                         the_product = match.group(1)  # Two words after "Hyundai"
                         model = match.group(2)
-                model = self.clean_model(model, response)  
+                model = self.clean_model(model, response)
+            else:
+                model = product.split("-")[1].capitalize() + " " +  product.split("-")[2].capitalize() if len(product.split("-")) > 3 else product.split("-")[1].capitalize()
+                the_product = product.split("-")[3].capitalize() if len(product.split("-")) > 3 else product.split("-")[1].capitalize()  
         except Exception as e:
             self.logger.error(f"Error occurred while matching regex: {e}")
 
@@ -87,8 +90,8 @@ class HyundaiCrawlerSpider(scrapy.Spider):
                     match_again = re.search(r'\bHyundai\s+(\S+)', text_content)
                 if match_again:
                     model = match_again.group(1).strip()
-        return model
-     
+        return model.replace("SENZOR", " ").strip()
+
     def clean_type(self, the_type):
         langs = ["ENG", "CZ", "SK", "PL", "HU", "DE", "(CE)" ]
         string = the_type
