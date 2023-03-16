@@ -106,9 +106,8 @@ class HyundaiCrawlerSpider(scrapy.Spider):
         if 'Retro' in text_content:
             model = text_content.split(
             )[2] + " " + text_content.split()[3] + " " + text_content.split()[4]
-        model_2 = ' '.join(text_content.split()[
-                           3:]) if "SENZOR" in text_content or "RAC" in text_content else ' '.join(text_content.split()[2:])
-        return model.replace("SENZOR", " ").strip(), model_2.replace("Hyundai", "").strip() if len(model_2) > 0 else model_2
+        model_2 = re.search(r"Hyundai\s+(.*)", text_content).group(1)
+        return model.replace("SENZOR", " ").replace(",", "").strip(), model_2.replace("Hyundai", "").replace(",", "").strip() if len(model_2) > 0 else model_2
 
     def clean_type(self, the_type):
         langs = ["ENG", "CZ", "SK", "PL", "HU", "DE", "(CE)"]
