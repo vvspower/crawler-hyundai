@@ -1,0 +1,73 @@
+2023-03-16 15:10:00 [scrapy.utils.log] INFO: Scrapy 2.8.0 started (bot: manual_scraper_ext)
+2023-03-16 15:10:01 [scrapy.utils.log] INFO: Versions: lxml 4.9.2.0, libxml2 2.9.12, cssselect 1.2.0, parsel 1.7.0, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)], pyOpenSSL 23.0.0 (OpenSSL 3.0.8 7 Feb 2023), cryptography 39.0.2, Platform Windows-10-10.0.19045-SP0
+2023-03-16 15:10:01 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'manual_scraper_ext',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'hyundai_crawler.log',
+ 'LOG_LEVEL': 'INFO',
+ 'NEWSPIDER_MODULE': 'manual_scraper_ext.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['manual_scraper_ext.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2023-03-16 15:10:01 [scrapy.extensions.telnet] INFO: Telnet Password: 60025a467458ebc8
+2023-03-16 15:10:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.feedexport.FeedExporter',
+ 'scrapy.extensions.logstats.LogStats']
+2023-03-16 15:10:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-03-16 15:10:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-03-16 15:10:01 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2023-03-16 15:10:01 [scrapy.core.engine] INFO: Spider opened
+2023-03-16 15:10:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-03-16 15:10:01 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2023-03-16 15:11:01 [scrapy.extensions.logstats] INFO: Crawled 1472 pages (at 1472 pages/min), scraped 882 items (at 882 items/min)
+2023-03-16 15:11:05 [scrapy.core.engine] INFO: Closing spider (finished)
+2023-03-16 15:11:05 [scrapy.extensions.feedexport] INFO: Stored csv feed (951 items) in: hyundai_crawler.csv
+2023-03-16 15:11:05 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 1152555,
+ 'downloader/request_count': 1549,
+ 'downloader/request_method_count/GET': 1549,
+ 'downloader/response_bytes': 48834188,
+ 'downloader/response_count': 1549,
+ 'downloader/response_status_count/200': 1547,
+ 'downloader/response_status_count/301': 2,
+ 'dupefilter/filtered': 1587,
+ 'elapsed_time_seconds': 63.771647,
+ 'feedexport/success_count/FileFeedStorage': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 3, 16, 10, 11, 5, 266257),
+ 'httpcompression/response_bytes': 197341666,
+ 'httpcompression/response_count': 1547,
+ 'item_scraped_count': 951,
+ 'log_count/INFO': 12,
+ 'request_depth_max': 2,
+ 'response_received_count': 1547,
+ 'robotstxt/request_count': 5,
+ 'robotstxt/response_count': 5,
+ 'robotstxt/response_status_count/200': 5,
+ 'scheduler/dequeued': 1543,
+ 'scheduler/dequeued/memory': 1543,
+ 'scheduler/enqueued': 1543,
+ 'scheduler/enqueued/memory': 1543,
+ 'start_time': datetime.datetime(2023, 3, 16, 10, 10, 1, 494610)}
+2023-03-16 15:11:05 [scrapy.core.engine] INFO: Spider closed (finished)
